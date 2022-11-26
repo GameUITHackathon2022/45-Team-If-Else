@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/wallet",
+    element: <Wallet />,
   },
 ]);
 

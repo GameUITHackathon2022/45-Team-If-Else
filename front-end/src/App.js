@@ -8,8 +8,27 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import {useNavigate} from "react-router-dom";
+
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginRight: theme.spacing(2),
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(3),
+    width: 'auto',
+  },
+}));
 
 function App() {
+
+  let navigate =useNavigate();
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="default">
@@ -65,7 +84,9 @@ function App() {
     </Box>
     <Grid container>
       <Grid item>
-        
+      <Search>
+
+      </Search>
       </Grid>
       <Grid item></Grid>
     </Grid>
