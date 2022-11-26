@@ -26,6 +26,16 @@ const Search = styled('div')(({ theme }) => ({
   },
 }));
 
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: "absolute",
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
 function App() {
 
   let navigate =useNavigate();
@@ -82,10 +92,13 @@ function App() {
       </AppBar>
       <Button color="inherit">Sign up</Button>
     </Box>
+    // cột trái
     <Grid container>
       <Grid item>
       <Search>
-
+      <SearchIconWrapper>
+      <SearchIcon />
+      </<SearchIconWrapper>
       </Search>
       </Grid>
       <Grid item></Grid>
